@@ -1,0 +1,10 @@
+<Context>
+    <Resource
+            name="jdbc/dbconnection"
+            type="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+            url="bpadmin"
+            driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+            username="bpadmin"
+            password="$admin123$"
+    />
+</Context>
