@@ -6,6 +6,7 @@ import com.cache.bp.bpcashed.repository.BPCustomerRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
 import java.util.HashMap;
@@ -27,8 +28,13 @@ public class MyController {
     @GetMapping("/get/bpcustomer/{id}")
     public ResponseEntity<BPCustomer> getcustomerById(@PathVariable(value = "id") Long customID)
             throws BpRunTimeException {
+        final String url="https://webhook.site/fd4e0c37-0136-4d82-b30f-5be24d088d58";
+        RestTemplate restTemplate=new RestTemplate();
+
         BPCustomer bpCustomer = bpCustomerRepository.findById(customID)
                 .orElseThrow(() -> new BpRunTimeException("Customer not found for this id :: " + customID));
+        System.out.println(restTemplate.getForObject(url,BPCustomer.class));
+
         return ResponseEntity.ok().body(bpCustomer);
     }
 

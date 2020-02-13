@@ -19,7 +19,11 @@
     <java.version>1.8</java.version>  
     <azure.version>2.2.0</azure.version> 
   </properties>  
-  <dependencies> 
+  <dependencies>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+    </dependency>
     <dependency> 
       <groupId>org.springframework.boot</groupId>  
       <artifactId>spring-boot-starter-data-jdbc</artifactId> 
@@ -63,7 +67,25 @@
       <groupId>org.springframework.boot</groupId>  
       <artifactId>spring-boot-starter-tomcat</artifactId>  
       <scope>provided</scope> 
-    </dependency>  
+    </dependency>
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.9.0</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>2.9.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>2.9.2</version>
+    </dependency>
     <dependency> 
       <groupId>org.springframework.boot</groupId>  
       <artifactId>spring-boot-starter-test</artifactId>  
@@ -102,8 +124,8 @@
           <!-- App information -->  
           <subscriptionId>a698a50c-9773-4e01-87c4-1b331123ae04</subscriptionId>  
           <resourceGroup>BasavResource1</resourceGroup>  
-          <appName>bpCacheApp</appName>  
-          <region>East US</region>  
+          <appName>BasavWinPlan1</appName>
+          <region>eastus</region>
           <!-- Java Runtime Stack for App Service on Windows-->  
           <runtime> 
             <os>windows</os>  
