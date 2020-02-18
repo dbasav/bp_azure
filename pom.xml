@@ -27,8 +27,8 @@
     <dependency> 
       <groupId>org.springframework.boot</groupId>  
       <artifactId>spring-boot-starter-data-jdbc</artifactId> 
-    </dependency>  
-    <dependency> 
+    </dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>  
       <artifactId>spring-boot-starter-data-jpa</artifactId> 
     </dependency>  
@@ -124,7 +124,7 @@
           <!-- App information -->  
           <subscriptionId>a698a50c-9773-4e01-87c4-1b331123ae04</subscriptionId>  
           <resourceGroup>BasavResource1</resourceGroup>  
-          <appName>BasavWinPlan1</appName>
+          <appName>bpCacheApp</appName>
           <region>eastus</region>
           <!-- Java Runtime Stack for App Service on Windows-->  
           <runtime> 

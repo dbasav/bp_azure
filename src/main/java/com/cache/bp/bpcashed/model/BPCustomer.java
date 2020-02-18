@@ -1,7 +1,5 @@
 package com.cache.bp.bpcashed.model;
 
-import com.sun.javafx.beans.IDProperty;
-
 import javax.persistence.*;
 
 @Entity
