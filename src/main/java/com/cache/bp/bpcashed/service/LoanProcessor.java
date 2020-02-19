@@ -106,9 +106,12 @@ public class LoanProcessor {
 
             final String url = "https://webhook.site/fd4e0c37-0136-4d82-b30f-5be24d088d58";
 
-            ResponseEntity<String> entity1 = restTemplate.getForEntity(url, String.class);
+            ResponseEntity<Loan> entity1 = restTemplate.getForEntity(url, Loan.class);
 
+           // ResponseEntity<Loan> entity1 = restTemplate.postForEntity(url, reqeuest,Loan.class);
+            ;
             if (entity1.getStatusCode().equals(HttpStatus.OK)) {
+                onSendMessageSuccess(message);
 
             } else {
                 throw new BpRunTimeException("Non 200 HTTP response code for EXTERNAL source!");
